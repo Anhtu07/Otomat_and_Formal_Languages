@@ -314,9 +314,33 @@ Trong đó:
 \end{itemize}
 \end{enumerate}
 
-\section{Văn phạm (Grammar)}
+\section{Văn phạm}
 \subsection{Định nghĩa}
+Văn phạm $G$ là một bộ gồm 4 thành phần:
+$$G = \{ V_T, V_N, S, P \}$$
+trong đó:\\
+\begin{enumerate}
+\item $V_T$ là bảng chữ cái (hay bảng chữ cái kết thúc), mỗi kí tự của nó được gọi là một ký hiệu kết thúc.
+\item $V_N$ là bảng chữ cái $V_N \cap V_T = \emptyset$ (hay bảng chữ cái không kết thúc), mỗi phần tử của nó được gọi là một ký hiệu không kết thúc hay ký hiệu phụ
+\item $S \in V_N$ được gọi là ký hiệu xuất phát
+\item $P$ là tập hợp các luật sinh có dạng $\alpha \rightarrow \beta$, $\alpha$ được gọi là vế trái, còn $\beta$ được gọi là vế phải của một luật sinh, trong đó $\alpha$, $\beta$ $\in (V_N \cup V_T)^*$ và $\alpha$ chứa ít nhất một ký tự không kết thúc.
+\end{enumerate}
+\subsection{Ngôn ngữ sinh bơi văn phạm}
+\textbf{Định nghĩa.} Cho văn phạm $G = \{ V_T, V_N, S, P \}$ và $\eta , \omega \in (V_N \cup V_T)^*$. Ta nói $\omega$ suy dẫn trực tiếp từ $\eta$, ký hiệu $\eta \Rightarrow \omega$, nếu tồn tại luật sinh $\alpha \rightarrow \beta$, và $\gamma , \sigma \in (V_N \cup V_T)^*$ sao cho $\eta = \gamma \alpha \sigma$, $\omega = \gamma \beta \sigma$ \\
+\textbf{Định nghĩa.} Cho văn phạm $G = \{ V_T, V_N, S, P \}$ và $\eta , \omega \in (V_N \cup V_T)^*$. Ta nói $\omega$ suy dẫn (hay suy dẫn gián tiếp) từ $\eta$, ký hiệu $\eta \Rightarrow^* \omega$, nếu $\eta = \omega$ hoặc tồn tại một dãy $D = \omega_0 , \omega_1 , ... \omega_k$ sao cho $\omega_0 = \eta$, $\omega_k = \omega$ và $\omega_i \Rightarrow \omega_{i+1}$
+\textbf{Định nghĩa.} Cho văm phạm  $G = \{ V_T, V_N, S, P \}$. Xâu $\omega \in V_T^*$ được gọi là sinh bởi văn phạm $G$ nếu tồn tại suy dẫn $S \Rightarrow^* \omega$. Ngôn ngữ sinh bởi văn pham $G$, ký hiệu là $L(G)$, là tập hợp tất cả các xâu sinh bởi văn phạm $G$.
+$$L(G) = \{ \omega \in V_N^* | S \Rightarrow^* \omega \}$$
+
 \subsection{Văn phạm chính quy}
+Dựa vào đặc điểm của tập luật sinh mà người ta chia các văn phạm thành các nhóm khác nhau. Noam Chomsky đã phân loại văn phạm thành 4 nhóm:
+\begin{enumerate}
+\item Nhóm 0: Văn phạm không hạn chế
+\item Nhóm 1: Văn phạm cảm ngữ cảnh
+\item Nhóm 2: Văn phạm phi ngữ cảnh
+\item Nhóm 3: Văn phạm chính quy
+\end{enumerate}
+
+Trong khuôn khổ của bài báo cáo này, do ta chỉ quan tâm đến ngôn ngữ chính quy, nên bài báo cáo sẽ chỉ trình bày các kết quả liên quan đến văn phạm  chính quy.
 
 \section{Thuật Toán}
 

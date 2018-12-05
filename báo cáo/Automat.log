@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.3.12)  4 DEC 2018 20:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.3.12)  5 DEC 2018 17:04
 entering extended mode
 **./Automat.tex
 (Automat.tex
@@ -914,22 +914,27 @@ File: dothibtcq.png Graphic file (type png)
 <use dothibtcq.png>
 Package pdftex.def Info: dothibtcq.png  used on input line 263.
 (pdftex.def)             Requested size: 414.04814pt x 266.64699pt.
- [12] [13 <./dothibtcq.png>] [14] [15]
-Ch\uhorn \ohorn ng 3.
-[16
+ [12] [13 <./dothibtcq.png>] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 320--322
 
-] [17]
-Ch\uhorn \ohorn ng 4.
+ []
+
+[15] [16] [17]
+Ch\uhorn \ohorn ng 3.
 [18
+
+] [19]
+Ch\uhorn \ohorn ng 4.
+[20
 
 ]
 Ch\uhorn \ohorn ng 5.
-[19
+[21
 
 ] (Automat.aux) ) 
 Here is how much of TeX's memory you used:
  4171 strings out of 493305
- 56492 string characters out of 3129802
+ 56689 string characters out of 3129802
  116731 words of memory out of 3000000
  7612 multiletter control sequences out of 15000+200000
  17811 words of font info for 42 fonts, out of 3000000 for 9000
@@ -946,9 +951,9 @@ cm/cmsy10.pfb><C:/Users/tungu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
 lic/amsfonts/symbols/msbm10.pfb><C:/Users/tungu/AppData/Local/Programs/MiKTeX 2
 .9/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/tungu/AppData/Local/Programs/MiKT
 eX 2.9/fonts/type1/vntex/vnr/vnr12.pfb>
-Output written on Automat.pdf (19 pages, 251211 bytes).
+Output written on Automat.pdf (21 pages, 258354 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
+ 108 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -10,14 +10,15 @@
 \contentsline {subsection}{\numberline {2.4.3}\IeC {\DJ }\IeC {\`\ocircumflex } th\IeC {\d i} bi\IeC {\h \ecircumflex }u di\IeC {\~\ecircumflex }n bi\IeC {\h \ecircumflex }u th\IeC {\'\uhorn }c ch\IeC {\'\i }nh quy}{12}
 \contentsline {section}{\numberline {2.5}Automat \IeC {\dj }\IeC {\ohorn }n \IeC {\dj }\IeC {\d i}nh(Determinictic Finite Automata)}{13}
 \contentsline {section}{\numberline {2.6}Automat \IeC {\dj }a \IeC {\dj }\IeC {\d i}nh(Nondeterministic Finite Automata)}{14}
-\contentsline {section}{\numberline {2.7}V\IeC {\u a}n ph\IeC {\d a}m (Grammar)}{15}
+\contentsline {section}{\numberline {2.7}V\IeC {\u a}n ph\IeC {\d a}m}{15}
 \contentsline {subsection}{\numberline {2.7.1}\IeC {\DJ }\IeC {\d i}nh ngh\IeC {\~\i }a}{15}
-\contentsline {subsection}{\numberline {2.7.2}V\IeC {\u a}n ph\IeC {\d a}m ch\IeC {\'\i }nh quy}{15}
-\contentsline {section}{\numberline {2.8}Thu\IeC {\d \acircumflex }t To\IeC {\'a}n}{15}
-\contentsline {chapter}{\numberline {3}S\IeC {\ohorn } l\IeC {\uhorn }\IeC {\d \ohorn }c v\IeC {\`\ecircumflex } l\IeC {\'y} thuy\IeC {\'\ecircumflex }t m\IeC {\~a}}{16}
-\contentsline {section}{\numberline {3.1}M\IeC {\~a}}{16}
-\contentsline {section}{\numberline {3.2}M\IeC {\~a} t\IeC {\'\ocircumflex }i \IeC {\dj }\IeC {\d a}i}{16}
-\contentsline {section}{\numberline {3.3}M\IeC {\~a} prefix}{17}
-\contentsline {section}{\numberline {3.4}Ti\IeC {\^e}u chu\IeC {\h \acircumflex }n ki\IeC {\h \ecircumflex }m \IeC {\dj }\IeC {\d i}nh m\IeC {\~a}}{17}
-\contentsline {chapter}{\numberline {4}\IeC {\'\UHORN }ng d\IeC {\d u}ng: Single-Error Correcting Codes}{18}
-\contentsline {chapter}{\numberline {5}K\IeC {\'\ecircumflex }t lu\IeC {\d \acircumflex }n}{19}
+\contentsline {subsection}{\numberline {2.7.2}Ng\IeC {\^o}n ng\IeC {\~\uhorn } sinh b\IeC {\ohorn }i v\IeC {\u a}n ph\IeC {\d a}m}{16}
+\contentsline {subsection}{\numberline {2.7.3}V\IeC {\u a}n ph\IeC {\d a}m ch\IeC {\'\i }nh quy}{16}
+\contentsline {section}{\numberline {2.8}Thu\IeC {\d \acircumflex }t To\IeC {\'a}n}{17}
+\contentsline {chapter}{\numberline {3}S\IeC {\ohorn } l\IeC {\uhorn }\IeC {\d \ohorn }c v\IeC {\`\ecircumflex } l\IeC {\'y} thuy\IeC {\'\ecircumflex }t m\IeC {\~a}}{18}
+\contentsline {section}{\numberline {3.1}M\IeC {\~a}}{18}
+\contentsline {section}{\numberline {3.2}M\IeC {\~a} t\IeC {\'\ocircumflex }i \IeC {\dj }\IeC {\d a}i}{18}
+\contentsline {section}{\numberline {3.3}M\IeC {\~a} prefix}{19}
+\contentsline {section}{\numberline {3.4}Ti\IeC {\^e}u chu\IeC {\h \acircumflex }n ki\IeC {\h \ecircumflex }m \IeC {\dj }\IeC {\d i}nh m\IeC {\~a}}{19}
+\contentsline {chapter}{\numberline {4}\IeC {\'\UHORN }ng d\IeC {\d u}ng: Single-Error Correcting Codes}{20}
+\contentsline {chapter}{\numberline {5}K\IeC {\'\ecircumflex }t lu\IeC {\d \acircumflex }n}{21}
