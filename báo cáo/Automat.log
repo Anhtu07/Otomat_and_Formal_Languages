@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.3.12)  5 DEC 2018 17:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.3.12)  5 DEC 2018 23:47
 entering extended mode
 **./Automat.tex
 (Automat.tex
@@ -725,24 +725,50 @@ Package: amsthm 2017/10/31 v2.20.4
 \thm@headsep=\skip54
 \dth@everypar=\toks32
 )
-\c@theorem=\count108
+("C:\Users\tungu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\algorithms\algorit
+hm.sty"
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+("C:\Users\tungu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count108
+\float@exts=\toks33
+\float@box=\box32
+\@float@everytoks=\toks34
+\@floatcapt=\box33
+)
+\@float@every@algorithm=\toks35
+\c@algorithm=\count109
+)
+("C:\Users\tungu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\algorithms\algorit
+hmic.sty"
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count110
+\c@ALC@line=\count111
+\c@ALC@rem=\count112
+\c@ALC@depth=\count113
+\ALC@tlm=\skip55
+\algorithmicindent=\skip56
+)
+\c@theorem=\count114
  (Automat.aux)
 \openout1 = `Automat.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -782,17 +808,17 @@ LaTeX Font Info:    ... okay on input line 18.
 ("C:\Users\tungu\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.mk
 ii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count109
+\scratchcounter=\count115
 \scratchdimen=\dimen129
-\scratchbox=\box32
-\nofMPsegments=\count110
-\nofMParguments=\count111
-\everyMPshowfont=\toks33
-\MPscratchCnt=\count112
+\scratchbox=\box34
+\nofMPsegments=\count116
+\nofMParguments=\count117
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count118
 \MPscratchDim=\dimen130
-\MPnumerator=\count113
-\makeMPintoPDFobject=\count114
-\everyMPtoPDFconversion=\toks34
+\MPnumerator=\count119
+\makeMPintoPDFobject=\count120
+\everyMPtoPDFconversion=\toks37
 )
 ("C:\Users\tungu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-
 base.sty"
@@ -852,35 +878,35 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 51.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 53.
 
 ("C:\Users\tungu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\jknappen\ursfs.fd"
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 51.
+LaTeX Font Info:    Try loading font information for U+msa on input line 53.
  ("C:\Users\tungu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 51.
+LaTeX Font Info:    Try loading font information for U+msb on input line 53.
  ("C:\Users\tungu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 51.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 53.
  ("C:\Users\tungu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 <logobkdentrang.png, id=1, 356.7729pt x 526.3665pt>
 File: logobkdentrang.png Graphic file (type png)
 <use logobkdentrang.png>
-Package pdftex.def Info: logobkdentrang.png  used on input line 51.
+Package pdftex.def Info: logobkdentrang.png  used on input line 53.
 (pdftex.def)             Requested size: 71.3533pt x 105.27142pt.
 
-Overfull \hbox (2.02336pt too wide) in paragraph at lines 51--53
+Overfull \hbox (2.02336pt too wide) in paragraph at lines 53--55
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--53
+Underfull \hbox (badness 10000) in paragraph at lines 53--55
 
  []
 
@@ -899,12 +925,12 @@ Ch\uhorn \ohorn ng 1.
 
 ] [5]
 Ch\uhorn \ohorn ng 2.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 71.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 73.
 ("C:\Users\tungu\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <14.4> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 71.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 73.
 
 [6
 
@@ -912,48 +938,154 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <14.4> not available
 <dothibtcq.png, id=46, 376.40625pt x 242.40562pt>
 File: dothibtcq.png Graphic file (type png)
 <use dothibtcq.png>
-Package pdftex.def Info: dothibtcq.png  used on input line 263.
+Package pdftex.def Info: dothibtcq.png  used on input line 265.
 (pdftex.def)             Requested size: 414.04814pt x 266.64699pt.
  [12] [13 <./dothibtcq.png>] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 320--322
+Underfull \hbox (badness 10000) in paragraph at lines 322--324
 
  []
 
 [15] [16] [17]
-Ch\uhorn \ohorn ng 3.
-[18
+Underfull \hbox (badness 10000) in paragraph at lines 370--371
 
-] [19]
-Ch\uhorn \ohorn ng 4.
-[20
+ []
+
+[18]
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 376.
+
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 379.
+
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 381.
+
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 383.
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 414--415
+
+ []
+
+<empty.png, id=74, 279.0425pt x 54.2025pt>
+File: empty.png Graphic file (type png)
+<use empty.png>
+Package pdftex.def Info: empty.png  used on input line 419.
+(pdftex.def)             Requested size: 195.3284pt x 37.94148pt.
+[20]
+<symbol.png, id=79, 279.0425pt x 54.2025pt>
+File: symbol.png Graphic file (type png)
+<use symbol.png>
+Package pdftex.def Info: symbol.png  used on input line 423.
+(pdftex.def)             Requested size: 195.3284pt x 37.94148pt.
+<union.png, id=80, 454.69875pt x 304.13625pt>
+File: union.png Graphic file (type png)
+<use union.png>
+Package pdftex.def Info: union.png  used on input line 427.
+(pdftex.def)             Requested size: 272.82135pt x 182.48315pt.
+<concac.png, id=81, 399.4925pt x 128.48pt>
+File: concac.png Graphic file (type png)
+<use concac.png>
+Package pdftex.def Info: concac.png  used on input line 431.
+(pdftex.def)             Requested size: 239.69734pt x 77.08858pt.
+<star.png, id=82, 504.88625pt x 251.94125pt>
+File: star.png Graphic file (type png)
+<use star.png>
+Package pdftex.def Info: star.png  used on input line 435.
+(pdftex.def)             Requested size: 302.93407pt x 151.16591pt.
+ [21 <./empty.png> <./symbol.png> <./union.png> <./concac.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 447--457
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--481
+
+ []
+
+[22 <./star.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 484--507
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 510--528
+
+ []
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 531--540
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 543--552
+
+ []
+
+[25] [26]
+Ch\uhorn \ohorn ng 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 563--565
+
+ []
+
+[27
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 567--568
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 569--571
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 572--574
+
+ []
+
+[28] [29] [30]
+Ch\uhorn \ohorn ng 4.
+[31
+
+] [32] [33]
 Ch\uhorn \ohorn ng 5.
-[21
+[34
+
+]
+Ch\uhorn \ohorn ng 6.
+[35
 
 ] (Automat.aux) ) 
 Here is how much of TeX's memory you used:
- 4171 strings out of 493305
- 56689 string characters out of 3129802
- 116731 words of memory out of 3000000
- 7612 multiletter control sequences out of 15000+200000
- 17811 words of font info for 42 fonts, out of 3000000 for 9000
+ 4431 strings out of 493305
+ 60128 string characters out of 3129802
+ 124529 words of memory out of 3000000
+ 7857 multiletter control sequences out of 15000+200000
+ 19756 words of font info for 44 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,13n,27p,1649b,321s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,13n,27p,1649b,551s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/tungu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmex10.pfb><C:/Users/tungu/AppData/Local/Programs/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/tungu/AppData/Local/Progra
 ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/tungu/AppData
-/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/t
-ungu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/t
+ungu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb
 ><C:/Users/tungu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmsy10.pfb><C:/Users/tungu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/symbols/msbm10.pfb><C:/Users/tungu/AppData/Local/Programs/MiKTeX 2
-.9/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/tungu/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/vntex/vnr/vnr12.pfb>
-Output written on Automat.pdf (21 pages, 258354 bytes).
+cm/cmr12.pfb><C:/Users/tungu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmr7.pfb><C:/Users/tungu/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/tungu/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/tungu/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/tu
+ngu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/vntex/vnr/vnbx12.pfb><C:/User
+s/tungu/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/vntex/vnr/vnr12.pfb>
+Output written on Automat.pdf (35 pages, 379623 bytes).
 PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
+ 175 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

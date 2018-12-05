@@ -10,6 +10,8 @@
 \usepackage[intlimits]{amsmath}
 \usepackage{array}
 \usepackage{amsxtra,amssymb,latexsym,amscd,amsthm}
+\usepackage{algorithm}
+\usepackage{algorithmic}
 \newtheorem{theorem}{\MakeUppercase{K}ết quả}[section]
 % khoảng cách dòng 1.5 lines (như trong MS Word)
 \renewcommand{\baselinestretch}{1.5}
@@ -219,7 +221,7 @@ Ngôn ngữ chính quy được định nghĩa như sau:
 \section{Biểu thức chính quy}
 \subsection{Định nghĩa}
 
-Biểu thức chính quy được định nghĩa như sau:
+Một công cụ để biểu diễn ngôn ngữ chính quy là biểu thức chính quy. Biểu được định nghĩa như sau:
 
 \begin{enumerate}
 \item $\varnothing$ là biểu thức chính quy
@@ -340,25 +342,276 @@ Dựa vào đặc điểm của tập luật sinh mà người ta chia các văn
 \item Nhóm 3: Văn phạm chính quy
 \end{enumerate}
 
-Trong khuôn khổ của bài báo cáo này, do ta chỉ quan tâm đến ngôn ngữ chính quy, nên bài báo cáo sẽ chỉ trình bày các kết quả liên quan đến văn phạm  chính quy.
+Trong khuôn khổ của bài báo cáo này, do ta chỉ quan tâm đến ngôn ngữ chính quy, nên bài báo cáo sẽ chỉ trình bày các kết quả liên quan đến văn phạm  chính quy.\\
+\textbf{Định nghĩa.} Văn phạm $G = \{ V_T, V_N, S, P \}$ mà các quy tắc của nó chỉ có dạng $A \rightarrow aB$, $A \rightarrow a$ (hoặc chỉ có dạng $A \rightarrow Ba$, $A \rightarrow a$, trong đó $A, B \in V_N$, $a \in V_T$ được gọi là văn phạm loại 3 hay văn phạm chính quy.\\
+Các văn phạm mà các quy tắc của chúng có dạng trên, đồng thời chưa thêm quy tắc rỗng $S \rightarrow \epsilon$ cũng được gọi là văn phạm chính quy.\\
+Các quy tắc trong văn phạm chính quy được gọi là quy tắc chính quy. Ngôn ngữ do văn phạm chính quy suy ra được gọi là ngôn ngữ chính quy.
 
 \section{Thuật Toán}
+\begin{algorithm}[H]
+\caption{Chuyển từ NFA sang DFA}
+\begin{algorithmic} 
+\STATE \textbf{Input} (NFA) $M = \{Q, A, \delta, q_0, F\}$
+\STATE \textbf{Output} (DFA) $M' = \{Q', A, \delta', q_0', F'\}$
+\STATE Khởi tạo $Q' = \{q_0\}, F' = \emptyset$
+\WHILE{$\exists \delta'(q_x, a)$ chưa xác định với $q_x \in Q', a \in A$}
+\STATE Chọn $q_x' \in Q', a \in A$ sao cho $\delta'(q_x', a)$ chưa xác định
+\STATE Gán $q_{xa} = \delta'(q_x, a) = \{q \in Q | \delta(q', a) = q, q' \in q_x'\}$
+\IF{$q_{xa} \notin Q'$}
+\STATE $Q' = Q' \cup q_{xa}$
+\ENDIF
+\IF{$q_{xa} \cap F \ne \emptyset$}
+\STATE $F' = F' \cup q_{xa}$
+\ENDIF
+\ENDWHILE
+\end{algorithmic}
+\end{algorithm}
+%----------------------------------------------------------------------------------
+--------------------------------------------------------------------------------\\
 
+\textbf{Bổ đề Arden}: Với $X, A, B$ là các xâu kí tự, phương trình $X = A.X + B$ có nghiệm duy nhất là $X = A^*.B$\\
+Xét DFA hoặc NFA $M = \{Q, A, \delta, q_0, F\}$ có $n$ trạng thái, với mỗi trạng thái $q_i$ ta đưa ra một phương trình có dạng:
+\[\qquad \displaystyle Q_i = \bigcup\limits_{q_i \overset{a}{\to} q_j} a.Q_j + \begin{cases} \{\varepsilon\} &,\ q_i \in F \\ \emptyset &, \text{ngược lại}\end{cases}\]
+Ta thấy ta luôn có thể đưa về hệ phương trình như sau:
+\[X_i = B_i + A_{i,1}X_1 + … + A_{i,n}X_n \text{ trong đó } i = 1, 2, ..., n\]
+Ta có thể giải hệ này để tìm ra được biểu thức chính quy tương ứng.\\
+Xét với $i=n$:
+\[X_n = B_n + A_{n,1}X_1 + … + A_{n,n}X_n\]
+Theo bổ đề Arden, phương trình trên sẽ có nghiệm là 
+\[X_n = A_{n,n}^* (B_n + A_{n,1}X_1 + … + A_{n,n-1}X_{n-1})\]
+Bằng cách đặt $B'_n = A_{n,n}^* B_n$ và $A'_{n,i}=A_{n,n}^*A_{n,i}$, ta được:
+\[X_n = B'_n + A'_{n,1}X_1 + … + A'_{n,n-1}X_{n-1}\]
+Do đó, ta có thể bỏ $X_n$ khỏi các phương trình của hệ bằng cách đặt:
+\[B'_i = B_i + A_{i,n}B'_n\]
+\[A'_{i,j} = A_{i,j} + A_{i,n}A'_{n,j}\]
+với $i, j < n$.\\
+Làm như vậy cho đến khi $i=1$, ta sẽ được phương trình có dạng:
+\[X_1 = B_1'\]
+Đây chính là biểu thức chính quy cần tìm.
+\begin{algorithm}[H]
+\caption{Chuyển từ DFA hoặc NFA sang biểu thức chính quy}
+\begin{algorithmic} 
+\STATE \textbf{Input} DFA hoặc NFA $M = \{Q, A, \delta, q_0, F\}$
+\STATE \textbf{Output} Biểu thức chính quy tương ứng
+\STATE Khởi tạo mảng $B$ gồm $n$ phần tử, $B[i] = \epsilon$ nếu $q_i \in F$, ngược lại $B[i] = \emptyset$.
+\STATE Khởi tạo mảng $A$ kích thước $n \times n$, $A[i, j] = \emptyset$ với mọi $i, j \in \{0, n-1\}$
+\STATE Nếu $\delta{q_i, a} = q_j$ thì đặt $A[i, j] = a$
+\FOR{$m=n$ to $1$}
+\STATE Gán $B[m] = (A[m, m])^*.B[m]$
+\FOR{$j=1$ to $m$}
+\STATE Gán $A[m, j] = (A[m, m])^*.A[m, j]$
+\ENDFOR
+\FOR{$i=1$ to $m$}
+\STATE Gán $B[i] = B[i] + A[i, m].B[m]$
+\FOR{$j=1$ to $m$}
+\STATE Gán $A[i, j] = A[i, j] + A[i, m].A[m, j]$
+\ENDFOR
+\ENDFOR
+\ENDFOR
+\end{algorithmic}
+\end{algorithm}
+%----------------------------------------------------------------------------------
+--------------------------------------------------------------------------------\\
+
+Ta sẽ xây dựng NFA như sau:\\
+- Kí tự rỗng:
+\begin{center}
+\includegraphics[scale=0.7]{empty.png}
+\end{center}
+- Kí tự $a \in A$:
+\begin{center}
+\includegraphics[scale=0.7]{symbol.png}
+\end{center}
+- Phép hợp $s+t$:
+\begin{center}
+\includegraphics[scale=0.6]{union.png}
+\end{center}
+- Phép tích ghép $s.t$:
+\begin{center}
+\includegraphics[scale=0.6]{concac.png}
+\end{center}
+- Phép $s^*$:
+\begin{center}
+\includegraphics[scale=0.6]{star.png}
+\end{center}
+
+\begin{algorithm}[H]
+\caption{Chuyển từ biểu thức chính quy sang NFA}
+\begin{algorithmic} 
+\STATE \textbf{Input} Biểu thức chính quy $s$
+\STATE \textbf{Output} NFA $M = \{Q, A, \delta, q_0, F\}$
+\STATE Duyệt biểu thức chính quy, thực hiện xây dựng NFA như mô tả bên trên.
+\end{algorithmic}
+\end{algorithm}
+%----------------------------------------------------------------------------------
+--------------------------------------------------------------------------------\\
+\begin{algorithm}[H]
+\caption{Chuyển từ biểu thức chính quy sang DFA}
+\begin{algorithmic} 
+\STATE \textbf{Input} Biểu thức chính quy $s$
+\STATE \textbf{Output} DFA $M = \{Q, A, \delta, q_0, F\}$
+\STATE Thực hiện chuyển biểu thức chính quy sang NFA.
+\STATE Từ NFA trên ta tiếp tục thực hiện chuyển từ NFA sang DFA, tối tiểu hóa nếu cần.
+\STATE Từ đó ta có được DFA ứng với biểu thức chính quy đã cho.
+\end{algorithmic}
+\end{algorithm}
+%----------------------------------------------------------------------------------
+--------------------------------------------------------------------------------\\
+\begin{algorithm}[H]
+\caption{Chuyển từ văn phạm tuyến tính trái sang văn phạm tuyến tính phải}
+\begin{algorithmic} 
+\STATE \textbf{Input} Văn phạm tuyến tính trái $G_T = \{V_T, V_N, S, P\}$
+\STATE \textbf{Output} Văn phạm tuyến tính phải $G_P = \{V_T', V_N', S', P'\}$
+\IF{tồn tại luật có dạng $S \rightarrow Sw$ với $w \in V_T*$}
+\STATE Thêm vào $V_N$ $S_0$, thêm luật $S_0 \rightarrow S$ vào $P$, đặt $S = S_0$.
+\ENDIF
+\STATE Khởi tạo $V_T' = V_T, V_N' = V_N, P' = \emptyset, S' = S$
+\FOR{\textbf{each} luật $p \in P$}
+\IF{luật có dạng $S \rightarrow p$}
+\STATE Thêm luật đó vào $P'$
+\ELSIF{luật có dạng $A \rightarrow p$}
+\STATE Thêm luật $S \rightarrow pA$ vào $P'$
+\ELSIF{luật có dạng $B \rightarrow Ap$}
+\STATE Thêm luật $A \rightarrow pB$ vào $P'$
+\ELSIF{luật có dạng $S \rightarrow Ap$}
+\STATE Thêm luật $A \rightarrow p$ vào $P'$
+\ENDIF
+\ENDFOR
+\end{algorithmic}
+\end{algorithm}
+
+%----------------------------------------------------------------------------------
+--------------------------------------------------------------------------------\\
+\begin{algorithm}[H]
+\caption{Chuyển từ văn phạm chính quy sang NFA}
+\begin{algorithmic} 
+\STATE \textbf{Input} Văn phạm chính quy $G = \{V_T, V_N, S, P\}$
+\STATE \textbf{Output} NFA $M = \{Q, A, \delta, q_0, F\}$ tương ứng với văn phạm đã cho.
+\IF{Văn phạm $G$ là tuyến tính trái}
+\STATE Chuyển $G$ về dạng tuyến tính phải
+\ENDIF
+\STATE Khởi tạo $A = V_T$
+\FOR{\textbf{each} $v \in V_N$}
+\STATE Tạo trạng thái $q_{v}$ mới tương ứng.
+\STATE Thêm $q_{v}$ vào $Q$.
+\ENDFOR
+\STATE Gán $q_0 = q_S$
+\STATE Thêm trạng thái $q_\epsilon$ vào $Q$, đặt $F = \{q_\epsilon\}$
+\FOR{\textbf{each} luật $p \in P$}
+\STATE Với $p = A \rightarrow wB$ trong đó $A \in V_N, B \in V_N \cup \{\epsilon\}, w \in V_T^*, w = w_1.w_2...w_n$
+\STATE Thêm các trạng thái $q_{pw_1}, q_{pw_2}, ..., q_{pw_{n-1}}$ vào $Q$.
+\STATE Gán $\delta(q_{pw_i}, w_{i+1}) = q_{pw_{i+1}}$ với $i=1,...,n-2$.
+\STATE Gán $\delta(q_A, w_1) = q_{pw_1}$, $\delta(q_{pw_{n-1}}, w_n) = q_B$.
+\ENDFOR
+\end{algorithmic}
+\end{algorithm}
+
+%----------------------------------------------------------------------------------
+--------------------------------------------------------------------------------\\
+\begin{algorithm}[H]
+\caption{Chuyển từ NFA sang văn phạm tuyến tính phải}
+\begin{algorithmic} 
+\STATE \textbf{Input} NFA $M = \{Q, A, \delta, q_0, F\}$
+\STATE \textbf{Output} Văn phạm tuyến tính phải $G = \{V_T, V_N, S, P\}$ tương ứng với NFA đã cho.
+\STATE Khởi tạo $V_T = A, V_N = Q, S = q_0$
+\FOR{\textbf{each} $q_i \in Q$}
+\FOR{\textbf{each} $a \in A$}
+\FOR{\textbf{each} $q_j \in \delta(q_i, a)$}
+\STATE Thêm luật $q_i \rightarrow aq_j$ vào $P$
+\ENDFOR
+\ENDFOR
+\ENDFOR
+\FOR{\textbf{each} $q_i \in F$}
+\STATE Thêm luật $q_i \rightarrow \epsilon$ vào $P$
+\ENDFOR
+\end{algorithmic}
+\end{algorithm}
+
+%----------------------------------------------------------------------------------
+--------------------------------------------------------------------------------\\
+\begin{algorithm}[H]
+\caption{Chuyển từ văn phạm chính quy sang biểu thức chính quy}
+\begin{algorithmic} 
+\STATE \textbf{Input} Văn phạm chính quy $G = \{V_T, V_N, S, P\}$
+\STATE \textbf{Output} Biểu thức chính quy ứng với văn phạm đã cho
+\STATE Chuyển văn phạm chính quy về NFA
+\STATE Từ NFA thực hiện chuyển về biểu thức chính quy.
+\end{algorithmic}
+\end{algorithm}
+
+%----------------------------------------------------------------------------------
+--------------------------------------------------------------------------------\\
+\begin{algorithm}[H]
+\caption{Chuyển từ biểu thức chính quy sang văn phạm chính quy}
+\begin{algorithmic} 
+\STATE \textbf{Input} Biểu thức chính quy $s$
+\STATE \textbf{Output} Văn phạm chính quy $G = \{V_T, V_N, S, P\}$ ứng với biểu thức chính quy đã cho
+\STATE Chuyển biểu thức chính quy về NFA
+\STATE Từ NFA thực hiện chuyển về văn phạm tuyến tính phải. Đây cũng chính là văn phạm chính quy cần tìm.
+\end{algorithmic}
+\end{algorithm}
+
+\chapter{Tính chất của ngôn ngữ chính quy}
+\section{Ngôn ngữ không chính quy}
+\subsection{Bổ đề bơm}
+\textbf{Bổ đề bơm cho ngôn ngữ chính quy.} Cho $L$ là một ngôn ngữ chính quy. Khi đó tồn tại $n$ sao cho tất cả các xâu $w \in L$ mà $|w| \geq n$, ta luôn có thể phân tích $w$ thành 3 xâu con, $w = xyz$, thỏa mãn:
+\begin{enumerate}
+\item $y \neq \epsilon$
+\item $|xy| \leq n$
+\item $\forall \ k \geq 0$, xâu $xy^kz \in L$
+\end{enumerate}
+Bổ đề này có ý nghĩa rằng ta có thể tìm được một xâu $y$ không quá nhỏ so với $w$, mà ta có thể "bơm" thêm xâu $y$ vào trong $w$ mà vẫn thu được các xâu thuộc $L$.\\
+\textbf{Chứng minh.} \\
+
+\subsection{Ứng dụng của bồ để bơm}
+Trong phần này, bài báo cáo sẽ trình bày một vài ví dụ mà ở đó bổ đề bơm được sử dụng để chúng minh rằng một ngôn ngữ không là ngồn ngữ chính quy.\\
+
+\textbf{Ví dụ 1.}Chứng minh răng ngôn ngữ $L_{eq}$ gồm các xâu nhị phân có số chữ số 0 và số số chữ số 1 bằng nhau không là một ngôn ngữ chính quy. \\
+Giả sử phản chứng rằng $L_{eq}$ là ngôn ngữ chính quy. Khi đó theo bổ để bơm tồn tại $n$ thỏa mãn 3 tính chất nêu ở trên. Ta xét $w = 0^n 1^n$, dễ thấy rằng $w \in L_{eq}$ do số chữ số 0 bằng số chữ số 1 và bằng $n$. Theo tính chất 2 của bổ đề bơm, ta phân tích $w = xyz$ và $|xy| \leq n$. Ta thấy rằng $xy$ là prefix của $w$ với đồ dài nhỏ hơn n, do đó xâu $xy$ gồm toàn chữ số 0. Theo tính chất 3 của bổ đề bơm, ta có $xz \in L$ nhưng vì $y$ là xâu khác xâu rỗng nên $y$ chứa ít nhất một số 0. Suy ra $xz$ sẽ có số số 0 ít hơn số số 1 (mẫu thuẫn). Vậy $xz$ không là một ngôn ngữ chính quy.\\
+
+\textbf{Ví dụ 2.}Chứng minh rằng ngôn ngữ $L_{pr}$ gồm các xâu nhị phân chứa một số nguyên tố số 1 không là một ngôn ngữ chính quy. \\
+Giả sử rằng ... \\
+
+\section{Tính đóng của ngôn ngữ chính quy}
+Trong phần này, ta sẽ xem xét những tính chất của các phép toán trên ngôn ngữ chính quy. Những kết quả này được gọi là tính đóng của ngôn ngữ chính quy, bởi vì nó cho thấy rằng các ngôn ngữ chính quy là đóng dưới các phép toán này.
+\begin{enumerate}
+\item Hợp của hai ngôn ngữ chính quy là ngôn ngữ chính quy
+\item Giao của hai ngôn ngữ chính quy là ngôn ngữ chính quy
+\item Phần bù của một ngôn ngữ chính quy là một ngôn ngữ chính quy
+\item Phần khác giữa hai ngôn ngữ chính quy là ngôn ngữ chính
+\item Nghịch đảo của ngôn ngữ chính quy là một ngôn ngữ chính quy
+\item Phép toán sao trên một ngôn ngữ chính quy tạo ra một ngôn ngữ chính quy
+\item Tích ghép của hai ngôn ngữ chính quy là một ngôn ngữ chính quy
+\end{enumerate}
+
+\section{Tính quyết định của ngôn ngữ chính quy}
+Trong phần này, ta sẽ nghiên cứu những thuật toán để trả lời cho các câu hỏi liên quan đến ngôn ngữ chính quy:
+\begin{enumerate}
+\item Ngôn ngữ được miêu tả có rỗng hay không ?
+\item Một xâu $w$ cho trước có được đoán nhận bới một ngôn ngữ hai không ?
+\item Hai ngôn ngữ được miêu tả có biều diễn cùng một ngôn ngữ hay không ? hay nói cách khác, hai ngôn ngữ có tương đương vưới nhau hay không ?
+\end{enumerate}
+\subsection{Kiểm tra tính rỗng của ngôn ngữ chính quy}
+\subsection{Kiêm tra một xâu thuộc một ngôn ngữ chính quy}
+\subsection{Tương đương và cực tiểu hóa Otomat}
 \chapter{Sơ lược về lý thuyết mã}
 \section{Mã}
 $A$ là bảng chữ. $X$ được gọi là mã nếu $\forall m,n$ và $x_1,x_2,...,x_n,y_1,y_2,...,y_m \in X$ thỏa mãn điều kiện:
 \begin{center}
 $x_1x_2...x_n=y_1y_2...y_m$
 \end{center}
-Khi đó, $m=n$ và $x_i=y_i,i=\overline{1,n}$
-\section{Mã tối đại}
-Mã $X$ được gọi là tối đại trên $A$ nếu $X$ không chứa thực sự trong một mã nào khác trên $A$.
-
-Với mỗi lớp mã $C$ trên $A$, một mã $X\in C$ là tối đại trong $C$($C$ không nhất thiết là mã tối đại) nếu nó không chứa thực sự trong một mã nào khác của $C$.
-\section{Mã prefix}
-	Cho tập $X$ là tập con của $A^*$. $X$ được gọi là mã prefix nếu không có phần tử nào trên $X$ nằm ở bên trái của một phần tử khác trong $X$
-
-Nói cách khác, X là prefix nếu với mọi $x,x' \in X: x\leq x' \Rightarrow x=x'$
+khi đó, $m=n$ và $x_i=y_i,i=\overline{1,n}$ \\
+Từ định nghĩa trên ta dễ thấy tập con của một mã cũng là một mã.
+\subsection{Tính chất của mã}
+\textbf{Bổ đề 4.1} Con $X$ là tập con của $A^*$ là một mã, khi đó nếu một đồng cấu $\beta : B^* \rightarrow A^*$ chứa một song anh đi từ $B$ vào $X$ thì nó là đơn ánh. Ngược lại nếu tồn tại một đồng cấu đơn ánh $\beta : B^* \rightarrow A^*$ sao cho $X = \beta(B)$ thì $X$ là một mã. \\
+\textbf{Hệ quả 1.}Cho $\alpha : A^* \rightarrow C^*$ là một đồng cấu và đơn ánh. Khi đó, nếu $X$ là một mã trên $A$ thì $\alpha (X)$ là một mã trên $C$. Ngược lại, ta cũng có, nếu $Y$ là một mã trên $C$, thì $\alpha^{-1}(Y)$ cũng là một mà trên $A$ \\
+\textbf{Hệ quả 2.}Nếu $X \subset A^*$ là một mã, thì $X^n$ cũng là một mã trện $A \ \forall \ n > 0$
+\subsection{Mã tối đại}
+Mã $X$ được gọi là tối đại (theo nghĩa bao hàm) trên $A$ nếu $X$ không là con thực sự trong một mã nào khác trên $A$.\\
+Chú ý rằng tính tối đại của một mã phụ thuộc vào bảng chữ cái mà nó được xây dựng lên. Nếu $X \subset A^*$ là một mã tối đại trên $A$ và $A$ là tập con thực sự của $B$ thì khi đó $X$ không đảm bảo là mã tối đại trên $B$.\\
+\textbf{Bổ đề 4.2} Cho $A$ là một bảng chữ cái. Khi đó mọi ví nhóm con $M$ thuộc $A^*$ đều có duy nhất một tập sinh cực tiểu $X = (M-1) - (M-1)^2$\\
+\textbf{Bổ đề 4.3} Nếu $M$ là một vị nhóm tự do con của $A^*$, khi đó tập sinh cực tiểu của $M$ là một mã. Ngược lại, nếu $X \subset A^*$ là một mã, thì vị nhóm con $X^*$ là vị nhóm tự do và $X$ là tập sinh cực tiểu của nó.\\
+\textbf{Bổ đề 4.4}
 
 \section{Tiêu chuẩn kiểm định mã}
 Bài toán:
@@ -377,7 +630,9 @@ Nếu $\epsilon \in U_i $ thì X không phải là mã
 Nếu $U_i=U_n$ hoặc $U_n=\varnothing$ thì X là mã
 \end{itemize}
 
-\chapter{Ứng dụng: Single-Error Correcting Codes}
+\chapter{Ứng dụng của lý thuyết mã}
+\section{Single-Error Correcting Codes}
+\section{Lossless Data Compression}
 
 
 
