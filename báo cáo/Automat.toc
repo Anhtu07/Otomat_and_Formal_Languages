@@ -1,35 +1,37 @@
 \contentsline {chapter}{\numberline {1}Gi\IeC {\'\ohorn }i thi\IeC {\d \ecircumflex }u}{4}
 \contentsline {chapter}{\numberline {2}Ki\IeC {\'\ecircumflex }n th\IeC {\'\uhorn }c c\IeC {\ohorn } s\IeC {\h \ohorn }}{6}
 \contentsline {section}{\numberline {2.1}X\IeC {\^a}u}{6}
-\contentsline {section}{\numberline {2.2}Ng\IeC {\^o}n ng\IeC {\~\uhorn }}{8}
+\contentsline {section}{\numberline {2.2}Ng\IeC {\^o}n ng\IeC {\~\uhorn }}{7}
 \contentsline {section}{\numberline {2.3}Ng\IeC {\^o}n ng\IeC {\~\uhorn } ch\IeC {\'\i }nh quy}{10}
 \contentsline {subsection}{\numberline {2.3.1}\IeC {\DJ }\IeC {\d i}nh ngh\IeC {\~\i }a}{10}
 \contentsline {section}{\numberline {2.4}Bi\IeC {\h \ecircumflex }u th\IeC {\'\uhorn }c ch\IeC {\'\i }nh quy}{11}
 \contentsline {subsection}{\numberline {2.4.1}\IeC {\DJ }\IeC {\d i}nh ngh\IeC {\~\i }a}{11}
 \contentsline {subsection}{\numberline {2.4.2}C\IeC {\'a}c t\IeC {\'\i }nh ch\IeC {\'\acircumflex }t c\IeC {\h u}a bi\IeC {\h \ecircumflex }u th\IeC {\'\uhorn }c ch\IeC {\'\i }nh quy}{11}
 \contentsline {subsection}{\numberline {2.4.3}\IeC {\DJ }\IeC {\`\ocircumflex } th\IeC {\d i} bi\IeC {\h \ecircumflex }u di\IeC {\~\ecircumflex }n bi\IeC {\h \ecircumflex }u th\IeC {\'\uhorn }c ch\IeC {\'\i }nh quy}{12}
-\contentsline {section}{\numberline {2.5}Automat \IeC {\dj }\IeC {\ohorn }n \IeC {\dj }\IeC {\d i}nh(Determinictic Finite Automata)}{13}
-\contentsline {section}{\numberline {2.6}Automat \IeC {\dj }a \IeC {\dj }\IeC {\d i}nh(Nondeterministic Finite Automata)}{14}
-\contentsline {section}{\numberline {2.7}V\IeC {\u a}n ph\IeC {\d a}m}{15}
-\contentsline {subsection}{\numberline {2.7.1}\IeC {\DJ }\IeC {\d i}nh ngh\IeC {\~\i }a}{15}
-\contentsline {subsection}{\numberline {2.7.2}Ng\IeC {\^o}n ng\IeC {\~\uhorn } sinh b\IeC {\ohorn }i v\IeC {\u a}n ph\IeC {\d a}m}{16}
-\contentsline {subsection}{\numberline {2.7.3}V\IeC {\u a}n ph\IeC {\d a}m ch\IeC {\'\i }nh quy}{16}
-\contentsline {section}{\numberline {2.8}Thu\IeC {\d \acircumflex }t To\IeC {\'a}n}{18}
-\contentsline {chapter}{\numberline {3}T\IeC {\'\i }nh ch\IeC {\'\acircumflex }t c\IeC {\h u}a ng\IeC {\^o}n ng\IeC {\~\uhorn } ch\IeC {\'\i }nh quy}{27}
-\contentsline {section}{\numberline {3.1}Ng\IeC {\^o}n ng\IeC {\~\uhorn } kh\IeC {\^o}ng ch\IeC {\'\i }nh quy}{27}
-\contentsline {subsection}{\numberline {3.1.1}B\IeC {\h \ocircumflex } \IeC {\dj }\IeC {\`\ecircumflex } b\IeC {\ohorn }m}{27}
-\contentsline {subsection}{\numberline {3.1.2}\IeC {\'\UHORN }ng d\IeC {\d u}ng c\IeC {\h u}a b\IeC {\`\ocircumflex } \IeC {\dj }\IeC {\h \ecircumflex } b\IeC {\ohorn }m}{28}
-\contentsline {section}{\numberline {3.2}T\IeC {\'\i }nh \IeC {\dj }\IeC {\'o}ng c\IeC {\h u}a ng\IeC {\^o}n ng\IeC {\~\uhorn } ch\IeC {\'\i }nh quy}{29}
-\contentsline {section}{\numberline {3.3}T\IeC {\'\i }nh quy\IeC {\'\ecircumflex }t \IeC {\dj }\IeC {\d i}nh c\IeC {\h u}a ng\IeC {\^o}n ng\IeC {\~\uhorn } ch\IeC {\'\i }nh quy}{29}
-\contentsline {subsection}{\numberline {3.3.1}Ki\IeC {\h \ecircumflex }m tra t\IeC {\'\i }nh r\IeC {\~\ocircumflex }ng c\IeC {\h u}a ng\IeC {\^o}n ng\IeC {\~\uhorn } ch\IeC {\'\i }nh quy}{30}
-\contentsline {subsection}{\numberline {3.3.2}Ki\IeC {\^e}m tra m\IeC {\d \ocircumflex }t x\IeC {\^a}u thu\IeC {\d \ocircumflex }c m\IeC {\d \ocircumflex }t ng\IeC {\^o}n ng\IeC {\~\uhorn } ch\IeC {\'\i }nh quy}{30}
-\contentsline {subsection}{\numberline {3.3.3}T\IeC {\uhorn }\IeC {\ohorn }ng \IeC {\dj }\IeC {\uhorn }\IeC {\ohorn }ng v\IeC {\`a} c\IeC {\d \uhorn }c ti\IeC {\h \ecircumflex }u h\IeC {\'o}a Otomat}{30}
-\contentsline {chapter}{\numberline {4}S\IeC {\ohorn } l\IeC {\uhorn }\IeC {\d \ohorn }c v\IeC {\`\ecircumflex } l\IeC {\'y} thuy\IeC {\'\ecircumflex }t m\IeC {\~a}}{31}
-\contentsline {section}{\numberline {4.1}M\IeC {\~a}}{31}
-\contentsline {subsection}{\numberline {4.1.1}T\IeC {\'\i }nh ch\IeC {\'\acircumflex }t c\IeC {\h u}a m\IeC {\~a}}{31}
-\contentsline {subsection}{\numberline {4.1.2}M\IeC {\~a} t\IeC {\'\ocircumflex }i \IeC {\dj }\IeC {\d a}i}{32}
-\contentsline {section}{\numberline {4.2}Ti\IeC {\^e}u chu\IeC {\h \acircumflex }n ki\IeC {\h \ecircumflex }m \IeC {\dj }\IeC {\d i}nh m\IeC {\~a}}{32}
-\contentsline {chapter}{\numberline {5}\IeC {\'\UHORN }ng d\IeC {\d u}ng c\IeC {\h u}a l\IeC {\'y} thuy\IeC {\'\ecircumflex }t m\IeC {\~a}}{34}
-\contentsline {section}{\numberline {5.1}Single-Error Correcting Codes}{34}
-\contentsline {section}{\numberline {5.2}Lossless Data Compression}{34}
-\contentsline {chapter}{\numberline {6}K\IeC {\'\ecircumflex }t lu\IeC {\d \acircumflex }n}{35}
+\contentsline {section}{\numberline {2.5}Automat h\IeC {\~\uhorn }u h\IeC {\d a}n}{13}
+\contentsline {subsection}{\numberline {2.5.1}Automat \IeC {\dj }\IeC {\ohorn }n \IeC {\dj }\IeC {\d i}nh(DFA)}{13}
+\contentsline {subsection}{\numberline {2.5.2}Automat \IeC {\dj }a \IeC {\dj }\IeC {\d i}nh(NFA)}{14}
+\contentsline {section}{\numberline {2.6}V\IeC {\u a}n ph\IeC {\d a}m}{15}
+\contentsline {subsection}{\numberline {2.6.1}\IeC {\DJ }\IeC {\d i}nh ngh\IeC {\~\i }a}{15}
+\contentsline {subsection}{\numberline {2.6.2}Ng\IeC {\^o}n ng\IeC {\~\uhorn } sinh b\IeC {\ohorn }i v\IeC {\u a}n ph\IeC {\d a}m}{16}
+\contentsline {subsection}{\numberline {2.6.3}V\IeC {\u a}n ph\IeC {\d a}m ch\IeC {\'\i }nh quy}{17}
+\contentsline {chapter}{\numberline {3}T\IeC {\'\i }nh ch\IeC {\'\acircumflex }t c\IeC {\h u}a ng\IeC {\^o}n ng\IeC {\~\uhorn } ch\IeC {\'\i }nh quy}{18}
+\contentsline {section}{\numberline {3.1}\IeC {\DJ }i\IeC {\`\ecircumflex }u ki\IeC {\d \ecircumflex }n c\IeC {\`\acircumflex }n v\IeC {\`a} \IeC {\dj }\IeC {\h u} c\IeC {\h u}a ng\IeC {\^o}n ng\IeC {\~\uhorn } ch\IeC {\'\i }nh quy}{18}
+\contentsline {subsection}{\numberline {3.1.1}B\IeC {\h \ocircumflex } \IeC {\dj }\IeC {\`\ecircumflex } b\IeC {\ohorn }m}{18}
+\contentsline {subsection}{\numberline {3.1.2}\IeC {\'\UHORN }ng d\IeC {\d u}ng c\IeC {\h u}a b\IeC {\h \ocircumflex } \IeC {\dj }\IeC {\`\ecircumflex } b\IeC {\ohorn }m}{20}
+\contentsline {section}{\numberline {3.2}T\IeC {\'\i }nh \IeC {\dj }\IeC {\'o}ng c\IeC {\h u}a ng\IeC {\^o}n ng\IeC {\~\uhorn } ch\IeC {\'\i }nh quy}{21}
+\contentsline {section}{\numberline {3.3}T\IeC {\'\i }nh quy\IeC {\'\ecircumflex }t \IeC {\dj }\IeC {\d i}nh c\IeC {\h u}a ng\IeC {\^o}n ng\IeC {\~\uhorn } ch\IeC {\'\i }nh quy}{22}
+\contentsline {subsection}{\numberline {3.3.1}Ki\IeC {\h \ecircumflex }m tra t\IeC {\'\i }nh r\IeC {\~\ocircumflex }ng c\IeC {\h u}a ng\IeC {\^o}n ng\IeC {\~\uhorn } ch\IeC {\'\i }nh quy}{22}
+\contentsline {subsection}{\numberline {3.3.2}Ki\IeC {\^e}m tra m\IeC {\d \ocircumflex }t x\IeC {\^a}u thu\IeC {\d \ocircumflex }c m\IeC {\d \ocircumflex }t ng\IeC {\^o}n ng\IeC {\~\uhorn } ch\IeC {\'\i }nh quy}{22}
+\contentsline {subsection}{\numberline {3.3.3}T\IeC {\uhorn }\IeC {\ohorn }ng \IeC {\dj }\IeC {\uhorn }\IeC {\ohorn }ng v\IeC {\`a} c\IeC {\d \uhorn }c ti\IeC {\h \ecircumflex }u h\IeC {\'o}a Otomat}{22}
+\contentsline {chapter}{\numberline {4}Thu\IeC {\d \acircumflex }t To\IeC {\'a}n}{23}
+\contentsline {chapter}{\numberline {5}S\IeC {\ohorn } l\IeC {\uhorn }\IeC {\d \ohorn }c v\IeC {\`\ecircumflex } l\IeC {\'y} thuy\IeC {\'\ecircumflex }t m\IeC {\~a}}{32}
+\contentsline {section}{\numberline {5.1}M\IeC {\~a}}{32}
+\contentsline {subsection}{\numberline {5.1.1}T\IeC {\'\i }nh ch\IeC {\'\acircumflex }t c\IeC {\h u}a m\IeC {\~a}}{33}
+\contentsline {subsection}{\numberline {5.1.2}C\IeC {\'a}c lo\IeC {\d a}i m\IeC {\~a} \IeC {\dj }\IeC {\d \abreve }c bi\IeC {\d \ecircumflex }t}{33}
+\contentsline {subsection}{\numberline {5.1.3}M\IeC {\~a} t\IeC {\'\ocircumflex }i \IeC {\dj }\IeC {\d a}i}{34}
+\contentsline {section}{\numberline {5.2}Ti\IeC {\^e}u chu\IeC {\h \acircumflex }n ki\IeC {\h \ecircumflex }m \IeC {\dj }\IeC {\d i}nh m\IeC {\~a}}{35}
+\contentsline {chapter}{\numberline {6}\IeC {\'\UHORN }ng d\IeC {\d u}ng c\IeC {\h u}a l\IeC {\'y} thuy\IeC {\'\ecircumflex }t m\IeC {\~a}}{37}
+\contentsline {section}{\numberline {6.1}Single-Error Correcting Codes}{37}
+\contentsline {section}{\numberline {6.2}Lossless Data Compression}{37}
+\contentsline {chapter}{\numberline {7}K\IeC {\'\ecircumflex }t lu\IeC {\d \acircumflex }n}{38}
