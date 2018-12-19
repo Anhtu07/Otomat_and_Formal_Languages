@@ -40,7 +40,7 @@
 \end{center}
 \begin{flushleft}
 \vspace{1.3cm}
-\hspace{1.5cm} \textbf{ Giáng viên hướng dẫn:{ TS. Ngô Thị Hiền }}\\[0.2cm]
+\hspace{1.5cm} \textbf{ Giảng viên hướng dẫn:{ TS. Ngô Thị Hiền }}\\[0.2cm]
 \hspace{1.5cm} \textbf{ Nhóm Sinh viên thực hiện:}\\[0.2cm]
 \hspace{5cm}\textbf{Nguyễn Anh Tú}\\[0.2cm]
 \hspace{5cm}\textbf{Phạm Anh Tuấn}\\[0.2cm]
@@ -359,19 +359,21 @@ Bổ đề này có ý nghĩa rằng ta có thể tìm được một xâu $y$ k
 \end{itemize}
 \textbf{Chứng minh.} ($\Rightarrow$) Do $L$ là ngôn ngữ chính quy, nên tồn tại $M = (Q, \Sigma, \delta, q_0, F)$ là automat hữu hạn đơn định đóan nhận ngôn ngữ $L$. Gọi $n$ là số trạng thái của $M$. Chọn $k = n$, khi đó một xâu bất kì có độ dài lơn hơn $k$ đều phải đi qua một trạng thái nào đó ít nhất hai lần. Ta chọn $v$ là xâu ở giữa hai lần liên tiếp đi qua trạng thái đó. Ta dễ dàng có điều phải chứng minh. \\
 
-($\Leftarrow$) Để chứng minh $L$ là một ngôn ngữ chính quy, ta xây dưng DFA $M = (Q, \Sigma, \delta, q_0, F)$ đoán nhận $L$ như sau. Số trạng thái của $M$ :$|Q| = 1 + |\Sigma| + |\Sigma^2| + ... + |\Sigma^{k-1}|$. Khi chưa quan tâm đến các nút lá, thì $M$ là một cây gốc là $q_0$ mà trong đó các nút cha có đúng $|\Sigma|$ nút con ứng với cách chuyển trạng thái thì gặp các kí tự trong $\Sigma$. Một trạng thái $q$ là trạng thái kết thúc nếu tồn tại một xâu $w$ độ dài $l < k$, $w \in L$ và $\delta(q_0, w) = q$. Để hoàn thiện automat, ta cần phải xây dựng nốt hàm chuyển tại cái nút lá, tức là cần phải gán giá trị cho $\delta(q, \sigma)$ với $q$ là trạng thái ở nút là và $\sigma \in Sigma$. \\
+($\Leftarrow$) Để chứng minh $L$ là một ngôn ngữ chính quy, ta xây dưng DFA $M = (Q, \Sigma, \delta, q_0, F)$ đoán nhận $L$ như sau. Số trạng thái của $M$ :$|Q| = 1 + |\Sigma| + |\Sigma^2| + ... + |\Sigma^{k-1}|$. Khi chưa quan tâm đến các nút lá, thì $M$ là một cây gốc là $q_0$ mà trong đó các nút cha có đúng $|\Sigma|$ nút con ứng với cách chuyển trạng thái thì gặp các kí tự trong $\Sigma$. Một trạng thái $q$ là trạng thái kết thúc nếu tồn tại một xâu $w$ độ dài $l < k$, $w \in L$ và $\delta(q_0, w) = q$. Để hoàn thiện automat, ta cần phải xây dựng nốt hàm chuyển tại cái nút lá, tức là cần phải gán giá trị cho $\delta(q, \sigma)$ với $q$ là trạng thái ở nút là và $\sigma \in \Sigma$. \\
 
 Vì automat $M$ hiện tại đang là một cây, nên tại 1 nút $q$ lá chỉ có một đường đi duy nhất từ gốc đến nó. Gọi xâu tương ứng với nút đó là $L$ ($l$ có độ dài $k-1$). Để xác định giá trị của $\delta(q, \sigma)$ ta xem xét xâu $y = l\sigma $. Vì $|y| = k$, nên theo giả thiết tồn tại cách phân tích $y = uvw$ sao cho $\forall z \in \Sigma^*$ nếu $yz \in L$ thì $uv^iwz \in L$ và ngược lại. Cho $\delta(q, \sigma) = \delta(q_0, uw)$. Từ đó, ta dễ dàng chứng minh được $M$ là automat đoán nhận ngôn ngữ $L$
 
 \subsection{Ứng dụng của bổ đề bơm}
 Trong phần này, bài báo cáo sẽ trình bày một vài ví dụ mà ở đó bổ đề bơm được sử dụng để chúng minh rằng một ngôn ngữ không là ngồn ngữ chính quy.\\
+
 \textbf{Ví dụ 1.}Chứng minh răng ngôn ngữ $L_{eq}$ gồm các xâu nhị phân có số chữ số 0 và số số chữ số 1 bằng nhau không là một ngôn ngữ chính quy. \\
 Giả sử phản chứng rằng $L_{eq}$ là ngôn ngữ chính quy. Khi đó theo bổ để bơm tồn tại $n$ thỏa mãn 3 tính chất nêu ở trên. Ta xét $w = 0^n 1^n$, dễ thấy rằng $w \in L_{eq}$ do số chữ số 0 bằng số chữ số 1 và bằng $n$. Theo tính chất 2 của bổ đề bơm, ta phân tích $w = xyz$ và $|xy| \leq n$. Ta thấy rằng $xy$ là prefix của $w$ với đồ dài nhỏ hơn n, do đó xâu $xy$ gồm toàn chữ số 0. Theo tính chất 3 của bổ đề bơm, ta có $xz \in L$ nhưng vì $y$ là xâu khác xâu rỗng nên $y$ chứa ít nhất một số 0. Suy ra $xz$ sẽ có số số 0 ít hơn số số 1 (mẫu thuẫn). Vậy $L_{eq}$ không là một ngôn ngữ chính quy.\\
+
 \textbf{Ví dụ 2.}Chứng minh rằng ngôn ngữ $L_{pr}$ gồm các xâu nhị phân chứa một số nguyên tố số 1 không là một ngôn ngữ chính quy. \\
 Giả sử rằng $L$ là ngôn ngữ chính quy. Gọi $k$ là số nguyên tố lơn hơn $n$. Ta chọn xâu nhị phân $w$ gồm k chữ số 1. Theo định nghĩa, ta có $w$ thuộc vào ngôn ngữ $L_{pr}$. Theo bổ đề bơm, ta có $w = xyz$, $y \neq \epsilon$ và $xy^iz \in L \forall k \geq 0$. Gọi độ dài của xâu $y$ là $m$. Ta có $k + im$ là số nguyên tố với mọi $i$ (vô lý). Vậy $L_{pr}$ không là một ngôn ngữ chính quy.
 
 \section{Tính đóng của ngôn ngữ chính quy}
-Từ định nghĩa, ta thấy rằng ngôn ngữ chính quy là đóng với phép toán hợp, tích ghép và phép toán sao. Tuy nhiên, ngôn ngữ chính quy còn đóng đối với các phép toán khác, được liệt kê dưới đây.
+Từ định nghĩa, ta thấy rằng ngôn ngữ chính quy là đóng với phép toán hợp, tích ghép và phép toán sao. Tuy nhiên, ngôn ngữ chính quy còn đóng đối với các phép toán khác, được liệt kê và chứng minh dưới đây.
 \begin{enumerate}
 \item Hợp của hai ngôn ngữ chính quy là ngôn ngữ chính quy
 \item Giao của hai ngôn ngữ chính quy là ngôn ngữ chính quy
@@ -381,16 +383,43 @@ Từ định nghĩa, ta thấy rằng ngôn ngữ chính quy là đóng với ph
 \item Phép toán sao trên một ngôn ngữ chính quy tạo ra một ngôn ngữ chính quy
 \item Tích ghép của hai ngôn ngữ chính quy là một ngôn ngữ chính quy
 \end{enumerate}
+
+Chú ý rằng khi thực hiện các phép toán trên hai ngôn ngữ xây dựng trên hai bảng chữ cái khác nhau, ta hoàn toàn có thể xây dựng bảng chữ cái mới chung cho cả hai ngôn ngữ bằng việc lấy hợp của hai bảng chữ cái ban đầu. Do đó, để tránh việc giải thích nhiều lần, khi thực hiện phép toán trên hai ngôn ngữ, ta có thể giả sử rằng hai ngôn ngữ đó được xây dựng trên cùng một bảng chữ cái.
+
+\textbf{Định lý.} Nếu $L$ là ngôn ngữ chính quy trên bảng chữ cái $\Sigma$, thì $\overline{L} = \Sigma^* - L$ cũng là ngôn ngữ chính quy. \\
+
+\textbf{Chứng minh.} Do là một ngôn ngữ chính quy, gọi $L = L(A)$ trong đó $A$ là 1 DFA gồm năm thành phần $(Q, \Sigma, \delta, q_0, F)$ (trong đó hàm chuyển $\delta$ là hàm chuyển đầy đủ). Khi đó $\overline{L} = L(B)$ với DFA $B = (Q, \Sigma, \delta, q_0, Q -F)$. Tức là $B$ giống với $A$ chỉ khác rằng trạng thái chấp nhận được của $B$ là trạng thái không chấp nhận được của $A$, và ngược lại. Khi đó một xâu $w \in L(B)$ khi và chỉ khi $\delta(q_0, w) \in Q-F$, điều này chỉ xảy ra khi và chỉ khi $w \notin L(A)$ \\
+
+Ba phép toán trên tập hợp (hợp, giao, và lấy phần bù) không hoàn toàn độc lập với nhau. Do đó ta có thể dễ dàng chứng minh được giao của hai ngôn ngữ chính quy là một ngôn chính quy dựa vào công thức sau
+$$L \cap M = \overline{\overline{L} \cup \overline{M}}$$
+
+Tương tự như vậy ta có thể chứng minh hiệu (hay phần khác) giữa hai ngôn ngữ chính quy là một ngôn ngữ chính quy dừa vào công thức
+$$L - M = L \cap \overline{M}$$
+
+\textbf{Định lý.} Nếu $L$ là ngôn ngữ chính quy, thì $L^R$ cũng là ngôn ngữ chính quy\\
+
+\textbf{Chứng minh.} Giả sử $L$ là ngôn ngữ chính quy được biểu diễn bởi biểu thức chinh quy $E$. Ta sẽ chứng minh định lý trên bằng quy nạp theo kích cỡ của $E$. Ta cần chỉ ra rằng tồn tại một biểu thức chính quy $E^R$ sao cho $L(E^R) = (L(E))^R$. Thật vậy:\\
+
+Nếu $E$ là rỗng, kí tự rỗng hoặc một kí tự $a$ thuộc bảng chữ cái $\Sigma$, thì ta dễ thấy rằng $E^R = E$ là biểu thức chính quy ta cần tìm. \\
+
+Ta chứng minh quy nạp theo 3 trường hợp sau:
+\begin{enumerate}
+\item Nếu $E = E_1 + E_2$ thì khi đó chọn $E^R = E_1^R + E_2^R$
+\item Nếu $E = E_1 E_2$ thì $E^R = E_2^R E_1^R$
+\item Nếu $E = E_1^*$ thì $E^R = (E_1^R)^*$
+\end{enumerate}
+
+Bằng sử dụng tính chất của biểu thức chính quy được liệt kê ở chương 1, ta có thể chứng minh được nếu $E_1^R, E_2^R$ thỏa mãn $L(E_1^R) = (L(E_1))^R$ và $L(E_2^R) = (L(E_2))^R$ thì $L(E^R) = (L(E))^R$. Như vậy bằng quy nạp, ta có điều phải chứng minh.
 \section{Tính quyết định của ngôn ngữ chính quy}
-Trong phần này, ta sẽ nghiên cứu những thuật toán để trả lời cho các câu hỏi liên quan đến ngôn ngữ chính quy:
+Trong phần này, ta xem xét những thuật toán để trả lời cho các câu hỏi liên quan đến ngôn ngữ chính quy:
 \begin{enumerate}
 \item Ngôn ngữ được miêu tả có rỗng hay không ?
-\item Một xâu $w$ cho trước có được đoán nhận bới một ngôn ngữ hai không ?
-\item Hai ngôn ngữ được miêu tả có biều diễn cùng một ngôn ngữ hay không ? hay nói cách khác, hai ngôn ngữ có tương đương vưới nhau hay không ?
+\item Một xâu $w$ cho trước có thuộc một ngôn ngữ hai không
+\item Hai ngôn ngữ được miêu tả có biều diễn cùng một ngôn ngữ hay không ?
 \end{enumerate}
-\subsection{Kiểm tra tính rỗng của ngôn ngữ chính quy}
-\subsection{Kiêm tra một xâu thuộc một ngôn ngữ chính quy}
-\subsection{Tương đương và cực tiểu hóa Otomat}
+Trong nhiều trường hợp, ngôn ngữ chúng ta đang xem xét không được cho dưới dạng tường minh như một tập hợp, mà được miêu tả bằng một automat hữu hạn. Khi đó việc kiểm tra ngôn ngữ rỗng không còn hiển nhiên nữa. Tuy nhiên bài toán này tương đương với tìm đường đi trên đô thị bắt đầu từ đỉnh xuất phát và kết thúc là đỉnh chấp nhận được.\\
+Việc kiểm tra một xâu cho trước có thuộc một ngôn ngữ hay không là đơn giản nếu ta xây dựng được DFA hoặc NFA đoán nhận ngôn ngữ đó.\\
+Cuối cùng, việc chuyển đổi giữa các cách biểu diễn một ngôn ngữ chính quy được miêu tả chi tiết trong Chương 4.
 
 \chapter{Thuật Toán}
 \begin{algorithm}[H]
@@ -434,10 +463,10 @@ Làm như vậy cho đến khi $i=1$, ta sẽ được phương trình có dạn
 \[X_1 = B_1'\]
 Đây chính là biểu thức chính quy cần tìm.
 \begin{algorithm}[H]
-\caption{Chuyển từ DFA hoặc NFA sang biểu thức chính quy}
+\caption{Tìm ngôn ngữ chính quy được đón nhận bởi FA}
 \begin{algorithmic} 
 \STATE \textbf{Input} DFA hoặc NFA $M = \{Q, A, \delta, q_0, F\}$
-\STATE \textbf{Output} Biểu thức chính quy tương ứng
+\STATE \textbf{Output} Biểu thức chính quy biểu diễn ngôn ngữ chính quy tương ứng
 \STATE Khởi tạo mảng $B$ gồm $n$ phần tử, $B[i] = \epsilon$ nếu $q_i \in F$, ngược lại $B[i] = \emptyset$.
 \STATE Khởi tạo mảng $A$ kích thước $n \times n$, $A[i, j] = \emptyset$ với mọi $i, j \in \{0, n-1\}$
 \STATE Nếu $\delta{q_i, a} = q_j$ thì đặt $A[i, j] = a$
@@ -481,23 +510,12 @@ Ta sẽ xây dựng NFA như sau:\\
 \end{center}
 
 \begin{algorithm}[H]
-\caption{Chuyển từ biểu thức chính quy sang NFA}
+\caption{Xây dựng FA đoán nhận ngôn ngữ chính quy}
 \begin{algorithmic} 
-\STATE \textbf{Input} Biểu thức chính quy $s$
-\STATE \textbf{Output} NFA $M = \{Q, A, \delta, q_0, F\}$
+\STATE \textbf{Input} Biểu thức chính quy $s$ biểu diễn ngôn ngữ chính quy
+\STATE \textbf{Output} FA $M = \{Q, A, \delta, q_0, F\}$
 \STATE Duyệt biểu thức chính quy, thực hiện xây dựng NFA như mô tả bên trên.
-\end{algorithmic}
-\end{algorithm}
-%----------------------------------------------------------------------------------
---------------------------------------------------------------------------------\\
-\begin{algorithm}[H]
-\caption{Chuyển từ biểu thức chính quy sang DFA}
-\begin{algorithmic} 
-\STATE \textbf{Input} Biểu thức chính quy $s$
-\STATE \textbf{Output} DFA $M = \{Q, A, \delta, q_0, F\}$
-\STATE Thực hiện chuyển biểu thức chính quy sang NFA.
 \STATE Từ NFA trên ta tiếp tục thực hiện chuyển từ NFA sang DFA, tối tiểu hóa nếu cần.
-\STATE Từ đó ta có được DFA ứng với biểu thức chính quy đã cho.
 \end{algorithmic}
 \end{algorithm}
 %----------------------------------------------------------------------------------
@@ -514,12 +532,12 @@ Ta sẽ xây dựng NFA như sau:\\
 \FOR{\textbf{each} luật $p \in P$}
 \IF{luật có dạng $S \rightarrow p$}
 \STATE Thêm luật đó vào $P'$
-\ELSIF{luật có dạng $A \rightarrow p$}
-\STATE Thêm luật $S \rightarrow pA$ vào $P'$
-\ELSIF{luật có dạng $B \rightarrow Ap$}
-\STATE Thêm luật $A \rightarrow pB$ vào $P'$
-\ELSIF{luật có dạng $S \rightarrow Ap$}
-\STATE Thêm luật $A \rightarrow p$ vào $P'$
+\ELSIF{luật có dạng $A \rightarrow w$}
+\STATE Thêm luật $S \rightarrow wA$ vào $P'$
+\ELSIF{luật có dạng $B \rightarrow Aw$}
+\STATE Thêm luật $A \rightarrow wB$ vào $P'$
+\ELSIF{luật có dạng $S \rightarrow Aw$}
+\STATE Thêm luật $A \rightarrow w$ vào $P'$
 \ENDIF
 \ENDFOR
 \end{algorithmic}
@@ -528,7 +546,7 @@ Ta sẽ xây dựng NFA như sau:\\
 %----------------------------------------------------------------------------------
 --------------------------------------------------------------------------------\\
 \begin{algorithm}[H]
-\caption{Chuyển từ văn phạm chính quy sang NFA}
+\caption{Xây dựng NFA từ văn phạm chính quy}
 \begin{algorithmic} 
 \STATE \textbf{Input} Văn phạm chính quy $G = \{V_T, V_N, S, P\}$
 \STATE \textbf{Output} NFA $M = \{Q, A, \delta, q_0, F\}$ tương ứng với văn phạm đã cho.
@@ -575,24 +593,24 @@ Ta sẽ xây dựng NFA như sau:\\
 %----------------------------------------------------------------------------------
 --------------------------------------------------------------------------------\\
 \begin{algorithm}[H]
-\caption{Chuyển từ văn phạm chính quy sang biểu thức chính quy}
+\caption{Tìm ngôn ngữ chính quy được sinh bởi văn phạm chính quy}
 \begin{algorithmic} 
 \STATE \textbf{Input} Văn phạm chính quy $G = \{V_T, V_N, S, P\}$
-\STATE \textbf{Output} Biểu thức chính quy ứng với văn phạm đã cho
+\STATE \textbf{Output} Ngôn ngữ chính quy ứng với văn phạm đã cho
 \STATE Chuyển văn phạm chính quy về NFA
-\STATE Từ NFA thực hiện chuyển về biểu thức chính quy.
+\STATE Từ NFA thực hiện chuyển về ngôn ngữ chính quy.
 \end{algorithmic}
 \end{algorithm}
 
 %----------------------------------------------------------------------------------
 --------------------------------------------------------------------------------\\
 \begin{algorithm}[H]
-\caption{Chuyển từ biểu thức chính quy sang văn phạm chính quy}
+\caption{Tìm ngôn ngữ chính quy sinh ra bởi văn phạm tuyến tính phải}
 \begin{algorithmic} 
-\STATE \textbf{Input} Biểu thức chính quy $s$
+\STATE \textbf{Input} Ngôn ngữ chính quy $L$
 \STATE \textbf{Output} Văn phạm chính quy $G = \{V_T, V_N, S, P\}$ ứng với biểu thức chính quy đã cho
-\STATE Chuyển biểu thức chính quy về NFA
-\STATE Từ NFA thực hiện chuyển về văn phạm tuyến tính phải. Đây cũng chính là văn phạm chính quy cần tìm.
+\STATE Tìm NFA đoán nhận ngôn ngữ chính quy $L$
+\STATE Từ NFA thực hiện chuyển về văn phạm tuyến tính phải.
 \end{algorithmic}
 \end{algorithm}
 
@@ -659,10 +677,67 @@ $$U_{n+1} = X^{-1} U_n \cup U_n^{-1} \ với \ i \geq 1$$
 Đính lý 2.1 và bổ đề 2.2 giúp khẳng định rằng thuật toán trên sẽ dừng sau một số hữu hạn bước tính toán.
 
 \chapter{Ứng dụng của lý thuyết mã}
-\section{Single-Error Correcting Codes}
-\section{Lossless Data Compression}
+\section{Mã Hamming}
+\subsection{Giới thiệu}
+Mã Hamming là một mã sửa lỗi, được đặt tên theo người phát minh ra nó, Richard Hamming. Mã Hamming có thể phát hiện một bit hoặc hai bit lỗi. Mã Hamming còn có thể sửa các lỗi do một bit bị sai gây ra.
+\subsection{Lịch sử phát triển}
+\subsubsection{Mã chẵn lẻ}
+
+Trước mã hamming, người ta sử dụng mã chẵn lẻ. Mã chẵn lẻ thêm một bit vào trong dữ liệu, và bit này cho biết số lượng bit có giá trị $1$ của đoạn dữ liệu nằm trước là một số chẵn hay một số lẻ. Nếu một bit bị thay đổi trong quá trình truyền dữ liệu, giá trị chẵn lẻ trong thông điệp sẽ thay đổi và do đó có thể phát hiện được lỗi. Theo quy ước chung, bit kiểm tra có giá trị bằng $1$ nếu số lượng bit có giá trị một trong dữ liệu là một số lẻ, và giá trị của bit kiểm tra bằng $0$ nếu số lượng bit có giá trị một trong dữ liệu là một số chẵn. Nói cách khác, nếu đoạn dữ liệu và bit kiểm tra được gộp lại cùng với nhau, số lượng bit có giá trị bằng $1$ luôn luôn là một số chẵn.\\
+
+Việc kiểm tra dùng mã chẵn lẻ là một việc không được chắc chắn cho lắm, vì nếu số bit bị thay đổi là một số chẵn thì mã này không phát hiện được lỗi. Hơn nữa, mã chẵn lẻ không biết đươck bit nào là bit lỗi, kể cả khi nó phát hiện có lỗi xảy ra. Toàn bộ dữ liệu đã nhận được phải bỏ đi và truyền lại từ đầu. 
+\subsubsection{Mã hai-trong-năm}
 
 
+Trong những năm của thập niên kỷ 1940, Bell có sử dụng một mã hiệu phức tạp hơn một chút, gọi là mã hai-trong-năm (two-out-of-five code). Mã này đảm bảo mỗi một khối 5 bit (còn được gọi là khối-5) có chính xác hai bit có giá trị bằng 1. Máy tính có thể nhận ra là dữ liệu nhập vào có lỗi nếu trong một khối $5$ bit không $2$ bit có giá trị bằng $1$. Tuy thế, mã hai-trong-năm cũng chỉ có thể phát hiện được một đơn vị bit mà thôi; nếu trong cùng một khối, một bit bị lộn ngược thành giá trị $1$, và một bit khác bị lộn ngược thành giá trị $0$, quy luật hai-trong-năm vẫn cho một giá trị đúng (remained true), và do đó nó không phát hiện là có lỗi xảy ra.
+\subsubsection{Tái diễn dữ liệu}
+
+
+
+Một mã nữa được dùng trong thời gian này là mã hoạt động bằng cách nhắc đi nhắc lại bit dữ liệu vài lần (tái diễn bit được truyền) để đảm bảo bit dữ liệu được truyền, truyền đến nơi nhận trọn vẹn. Chẳng hạn, nếu bit dữ liệu cần được truyền có giá trị bằng 1, một mã tái diễn $n=3$ sẽ cho truyền gửi giá trị "$111$". Nếu ba bit nhận được không giống nhau, thì hiện trạng này báo cho ta biết rằng, lỗi trong truyền thông đã xảy ra. Nếu kênh truyền không bị nhiễu, tương đối đảm bảo, thì với hầu hết các lần truyền, trong nhóm ba bit được gửi, chỉ có một bit là bị thay đổi. Do đó các nhóm $001, 010$, và $100$ đều tương đương cho một bit có giá trị $0$, và các nhóm $110$, $101$, và $011$ đều tương đương cho một bit có giá trị $1$ - lưu ý số lượng bit có giá trị $0$ trong các nhóm được coi là có giá trị $0$, là đa số so với tổng số bit trong nhóm, hay $2$ trong $3$ bit, tương đương như vậy, các nhóm được coi là giá trị $1$ có số lượng bit bằng $1$ nhiều hơn là các bit có giá trị $0$ trong nhóm - chẳng khác gì việc các nhóm bit được đối xử như là "các phiếu bầu" cho bit dữ liệu gốc vậy. Một mã có khả năng tái dựng lại thông điệp gốc trong một môi trường nhiễu lỗi được gọi là mã "sửa lỗi" (error-correcting code).
+
+Tuy nhiên, những mã này không thể sửa tất cả các lỗi một cách đúng đắn hoàn toàn. Chẳng hạn chúng ta có một ví dụ sau: nếu một kênh truyền đảo ngược hai bit và do đó máy nhận thu được giá trị "$001$", hệ thống máy sẽ phát hiện là có lỗi xảy ra, song lại kết luận rằng bit dữ liệu gốc là bit có giá trị bằng $0$. Đây là một kết luận sai lầm. Nếu chúng ta tăng số lần các bit được nhắc lại lên $4$ lần, chúng ta có thể phát hiện tất cả các trường hợp khi $2$ bit bị lỗi, song chúng ta không thể sửa chữa chúng được (số phiếu bầu "hòa"); với số lần nhắc lại là $5$ lần, chúng ta có thể sửa chữa tất cả các trường hợp $2$ bit bị lỗi, song không thể phát hiện ra các trường hợp $3$ bit bị lỗi.
+
+Nói chung, mã tái diễn là một mã hết sức không hiệu quả, giảm công suất xuống $3$ lần so với trường hợp đầu tiên trong ví dụ trên của chúng ta, và công suất làm việc giảm xuống một cách nhanh chóng nếu chúng ta tăng số lần các bit được nhắc lại với mục đích để sửa nhiều lỗi hơn.
+\subsection{Xây dựng mã Hamming}
+Hamming nghiên cứu các kế hoạch mã hóa hiện có, rồi tổng quát hóa khái niệm. Ông xây dựng một danh mục để diễn tả hệ thống máy, bao gồm cả số lượng bit dùng cho dữ liệu và các bit sửa lỗi trong một khối. Chẳng hạn, nếu một từ dữ liệu có 8 bit chỉ gồm 7 bit chứa dữ liệu và phải thêm 1 bit sửa lỗi vào, ông diễn tả phương pháp này là mã $(8, 7)$. Như vậy mã tái diễn sẽ được gọi là mã $(3, 1)$. Ông đưa ra khái niệm "tỷ lệ thông tin", được tính bằng lấy con số thứ hai chia cho con số thứ nhất. Ví dụ, với mã tái diễn, tỷ lệ thông tin sẽ là $\frac{1}{3}$.\\
+
+Hamming còn phát hiện ra nan đề với việc đảo giá trị của hai hoặc hơn hai bit nữa, và miêu tả nó là "khoảng cách" (distance) (hiện nay nó được gọi là khoảng cách Hamming (Hamming distance) - theo cái tên của ông). Mã chẵn lẻ có khoảng cách bằng $2$, vì nếu có $2$ bit bị đảo ngược thì lỗi trong truyền thông trở nên vô hình, không phát hiện được. Mã tái diễn $(3,1$) có khoảng cách là $3$, vì $3$ bit, trong cùng một bộ ba, phải bị đổi ngược trước khi chúng ta được một từ mã khác. Mã tái diễn $(4,1)$ (mỗi bit được nhắc lại $4$ lần) có khoảng cách bằng $4$, nên nếu $2$ bit trong cùng một nhóm bị đảo ngược thì lỗi đảo ngược này sẽ đi thoát mà không bị phát hiện.\\
+
+Cùng một lúc, Hamming quan tâm đến hai vấn đề; tăng khoảng cách và đồng thời tăng tỷ lệ thông tin lên, càng nhiều càng tốt. Trong những năm thuộc niên kỷ 1940, ông đã xây dựng một số kế hoạch mã hóa. Những kế hoạch này đều dựa trên những mã đang tồn tại song được nâng cấp và tiến bộ một cách sâu sắc. Bí quyết chìa khóa cho tất cả các hệ thống của ông là việc cho các bit chẵn lẻ gối lên nhau (overlap), sao cho chúng có khả năng tự kiểm tra lẫn nhau trong khi cùng kiểm tra được dữ liệu nữa.
+
+Thuật toán cho việc xây dựng mã Hamming như sau:
+\begin{itemize}
+\item Tất cả các bit ở vị trí là các số mũ của 2 được dùng làm bit chẵn lẻ. (các vị trí như $1$, $2$, $4$, $8$, ...)
+\item Tất cả các vị trí bit khác được dùng cho dữ liệu sẽ được mã hóa.
+\item Mỗi bit chẵn lẻ đếm số lượng bit $1$ cho một số bit trong từ mã. Vị trí của bit chẵn lẻ quyết định chuỗi các bit mà nó kiểm tra.
+\begin{itemize}
+     \item Bit chẵn lẻ ở vị trí $1$ kiểm tra các bit có $1$ ở cuối trong vị trí được viết dưới dạng nhị phân (1=1, 3=11, 5=101, 7=111, ...) 
+     \item Bit chẵn lẻ ở vị trí $2$ kiểm tra các bit có $1$ ở thứ hai trong vị trí được viết dưới dạng nhị phân (2=10, 3=11, 6=110, 7=111, ...)
+     \item Bit chẵn lẻ ở vị trí $4$ kiểm tra các bit có $1$ ở thứ ba trong vị trí được viết dưới dạng nhị phân (4-7, 12-15, 20-23, ...)
+     \item Bit chẵn lẻ ở vị trí $8$ kiểm tra các bit có $1$ ở thứ tư trong vị trí được viết dưới dạng nhị phân (8-15, 24-31, 40-47, ...)
+\end{itemize}
+
+\end{itemize}
+
+\subsection{Ví dụ mã Hamming (11, 7)}
+Lấy ví dụ chúng ta có một từ dữ liệu dài 7 bit với giá trị là "$0110101$". Để chứng minh phương pháp các mã Hamming được tính toán và được sử dụng để kiểm tra lỗi, xin xem bảng liệt kê dưới đây. Chữ d (data) được dùng để biểu thị các bit dữ liệu và chữ p (parity) để biểu thị các bit chẵn lẻ (parity bits).
+\begin{center}
+\includegraphics[scale=0.8]{bang1.png}
+\end{center}
+Dữ liệu mới - bao gồm các bit chẵn lẻ - bây giờ là "$10001100101$". Nếu chúng ta thử cho rằng bit cuối cùng bị sai từ 1 sang 0. Nhóm dữ liệu mới sẽ là "$10001100100$"; Dưới đây, chúng ta sẽ phân tích quy luật kiến tạo mã Hamming bằng cách cho bit chẵn lẻ giá trị 1 khi kết quả kiểm tra dùng quy luật số chẵn bị sai.
+\begin{center}
+\includegraphics[scale=0.8]{bang2.png}
+\end{center}
+Bước cuối cùng là định giá trị của các bit chẵn lẻ (nên nhớ bit nằm dưới cùng được viết về bên phải - viết ngược lại từ dưới lên trên). Giá trị số nguyên của các bit chẵn lẻ là 11, và như vậy có nghĩa là bit thứ 11 trong nhóm dữ liệu (data word) - bao gồm cả các bit chẵn lẻ - là bit có giá trị không đúng, và bit này cần phải đổi ngược lại.
+\begin{center}
+\includegraphics[scale=0.8]{bang3.png}
+\end{center}
+Bằng việc sửa lỗi và bỏ đi phần mã Hamming, chúng ta lấy được phần dữ liệu gốc với giá trị là $0110101$.\\
+
+Lưu ý, các bit chẵn lẻ không kiểm tra được lẫn nhau, nếu chỉ một bit chẵn lẻ bị sai thôi, trong khi tất cả các bit khác là đúng, thì chỉ có bit chẵn lẻ nói đến là sai mà thôi và không phải là các bit nó kiểm tra (not any bit it checks).\\
+
+Cuối cùng, giả sử có hai bit biến đổi, tại vị trí $x$ và $y$. Nếu $x$ và $y$ có cùng một bit tại vị trí $2^k$ trong đại diện nhị phân của chúng, thì bit chẵn lẻ tương ứng với vị trí đấy kiểm tra cả hai bit, và do đó sẽ giữ nguyên giá trị, không thay đổi. Song một số bit chẵn lẻ nào đấy nhất định phải bị thay đổi, vì $x \ne y$, và do đó hai bit tương ứng nào đó có giá trị $x$ và $y$ khác nhau. Do vậy, mã Hamming phát hiện tất cả các lỗi do hai bit bị thay đổi — song nó không phân biệt được chúng với các lỗi do 1 bit bị thay đổi.
 
 
 \chapter{Kết luận}
@@ -670,7 +745,25 @@ Bài báo cáo đã hoàn thành trình bày kiến thức cơ sở và những 
 Lời cuối cùng, nhóm chúng em xin cảm ơn cô Ngô Thị Hiền đã giúp đỡ và hướng dẫn nhóm chúng em hoàn thiện bài báo này.
 \newpage
 {\huge \textbf{Tài liệu tham khảo}} \\
-[1] Introduction to Automata Theory, Languages, and Computation, \textit{John E. Hopcroft, Rajeev Motwani, Jeffray D.Ullman}
-[2] A Necessary and Sufficient Pumping Lemma for Regular Languages, \textit{Jeffrey Jaffe, 1978}
-[3]
+$\left[ 1 \right] $ Introduction to Automata Theory, Languages, and Computation, \textit{John E. Hopcroft, Rajeev Motwani, Jeffray D.Ullman} \\
+$\left[ 2 \right] $ A Necessary and Sufficient Pumping Lemma for Regular Languages, \textit{Jeffrey Jaffe, 1978} \\ [2.5cm]
+
+{\Large \textbf{Phân công công việc}} \\
+
+\textbf{Nguyễn Anh Tú}
+\begin{enumerate}
+\item Tìm hiểu lý thuyết, và thực hiện báo cáo chương 2,3,5
+\item Làm giao diện chương trình
+\end{enumerate}
+
+\textbf{Phạm Anh Tuấn} 
+\begin{enumerate}
+\item Lập trình 9 thuật toán, và viết báo cáo chương 4
+\item Đọc và tìm hiểu và mã sửa sai (chương 6)
+
+\newpage
+\end{enumerate}
 \end{document}
+
+
+
