@@ -1,0 +1,10 @@
+digraph G{
+label = ""
+rankdir = LR;
+node [shape = circle];
+node [shape = doublecircle]; 
+ "2";
+node [shape = circle];
+"0"[fillcolor=gray, style=filled];
+"0" -> "1" [label = "a"];
+"1" -> "2" [label = "b"];}

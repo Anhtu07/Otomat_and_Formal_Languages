@@ -1,0 +1,13 @@
+digraph G{
+label = ""
+rankdir = LR;
+node [shape = circle];
+node [shape = doublecircle]; 
+ "3,4,5" "5" "4,5";
+node [shape = circle];
+"1,2"[fillcolor=gray, style=filled];
+"1,2" -> "3,4,5" [label = "a"];
+"3,4,5" -> "5" [label = "a"];
+"3,4,5" -> "4,5" [label = "b"];
+"4,5" -> "5" [label = "a"];
+"4,5" -> "5" [label = "b"];}
